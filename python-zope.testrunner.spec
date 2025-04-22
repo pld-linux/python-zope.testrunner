@@ -42,9 +42,9 @@ BuildRequires:	python3-zope.testing
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
-BuildRequires:	python3-sphinxcontrib-programoutput
-BuildRequires:	python3-zope.exceptions
-BuildRequires:	sphinx-pdg-3
+BuildRequires:	python-sphinxcontrib-programoutput
+BuildRequires:	python-zope.exceptions
+BuildRequires:	sphinx-pdg-2
 %endif
 Requires:	python-modules >= 1:2.7
 Requires:	python-zope-base
@@ -107,7 +107,7 @@ Dokumentacja API modułu Pythona zope.testrunner.
 
 %if %{with doc}
 PYTHONPATH=$(pwd)/src \
-sphinx-build-3 -b html docs docs/_build/html
+sphinx-build-2 -b html docs docs/_build/html
 %endif
 
 %install
